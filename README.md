@@ -14,7 +14,7 @@ Steps to deploy
 3. Create a Connected App
 	* Enable OAuth
 	* Select openid scope
-	* Set Callback to https://HEROKUAPP_URL/_callback.php e.g. https://strong-castle-20163.herokuapp.com/_callback.php
+	* Set Callback to https://HEROKUAPP_URL/_callback e.g. https://strong-castle-20163.herokuapp.com/_callback
 	* Save
 	* Copy the Consumer Key
 	* You will also want to Manage the Connected App and change the Permitted Users policy from User to Admin Approved. Then you will want to a Profile or Permission Set for the user you want to test.
