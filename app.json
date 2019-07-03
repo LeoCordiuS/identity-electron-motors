@@ -1,0 +1,8 @@
+{
+  "name": "Electron Motors Website",
+  "description": "A website for the Electron Motors Salesforce Platform demo",
+  "repository": "https://github.com/gabesumner/electron-website",
+  "keywords": ["node", "express", "heroku", "salesforce"],
+  "image": "heroku/nodejs",
+  "addons": [ "heroku-postgresql", "herokuconnect" ]
+}
