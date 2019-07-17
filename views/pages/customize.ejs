@@ -155,7 +155,8 @@
             </div>
         </div>
         <div>
-            <% include ../partials/login.ejs %>
+           <!-- <% include ../partials/login.ejs %> -->
+            <a id="logoutItem" href="javascript:SFIDWidget.logout();SFIDWidget.cancel();onLogout();" style="display: none;">Logout</a>
         </div>
 
         <div id="toast">Vehicle preferences saved.</div>
