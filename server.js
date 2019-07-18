@@ -30,7 +30,14 @@ express()
             response.render("pages/index", {
                 account: data.account,
                 vehicle: data.vehicle,
-                SALESFORCE_COMMUNITY_URL : SALESFORCE_COMMUNITY_URL
+                SALESFORCE_COMMUNITY_URL : SALESFORCE_COMMUNITY_URL,
+                SALESFORCE_CLIENT_ID : SALESFORCE_CLIENT_ID,
+                SALESFORCE_REDIRECT_URI : SALESFORCE_REDIRECT_URI,
+                SALESFORCE_MODE : SALESFORCE_MODE,
+                SALESFORCE_SAVE_ACCESS_TOKEN : SALESFORCE_SAVE_ACCESS_TOKEN,
+                SALESFORCE_SELF_REGISTER_ENABLED : SALESFORCE_SELF_REGISTER_ENABLED,
+                SALESFORCE_SELF_REGISTER_STARTURL_ENABLED : SALESFORCE_SELF_REGISTER_STARTURL_ENABLED,
+                SALESFORCE_FORGOT_PASSWORD_ENABLED : SALESFORCE_FORGOT_PASSWORD_ENABLED
             });
         });
     })
@@ -39,7 +46,15 @@ express()
         db.getAccountAndVehicleByUsername(username, data => {
             response.render("pages/announce", {
                 account: data.account,
-                vehicle: data.vehicle
+                vehicle: data.vehicle,
+                SALESFORCE_COMMUNITY_URL : SALESFORCE_COMMUNITY_URL,
+                SALESFORCE_CLIENT_ID : SALESFORCE_CLIENT_ID,
+                SALESFORCE_REDIRECT_URI : SALESFORCE_REDIRECT_URI,
+                SALESFORCE_MODE : SALESFORCE_MODE,
+                SALESFORCE_SAVE_ACCESS_TOKEN : SALESFORCE_SAVE_ACCESS_TOKEN,
+                SALESFORCE_SELF_REGISTER_ENABLED : SALESFORCE_SELF_REGISTER_ENABLED,
+                SALESFORCE_SELF_REGISTER_STARTURL_ENABLED : SALESFORCE_SELF_REGISTER_STARTURL_ENABLED,
+                SALESFORCE_FORGOT_PASSWORD_ENABLED : SALESFORCE_FORGOT_PASSWORD_ENABLED
             });
         });
     })
@@ -48,7 +63,15 @@ express()
         db.getAccountAndVehicleByUsername(username, data => {
             response.render("pages/order", {
                 account: data.account,
-                vehicle: data.vehicle
+                vehicle: data.vehicle,
+                SALESFORCE_COMMUNITY_URL : SALESFORCE_COMMUNITY_URL,
+                SALESFORCE_CLIENT_ID : SALESFORCE_CLIENT_ID,
+                SALESFORCE_REDIRECT_URI : SALESFORCE_REDIRECT_URI,
+                SALESFORCE_MODE : SALESFORCE_MODE,
+                SALESFORCE_SAVE_ACCESS_TOKEN : SALESFORCE_SAVE_ACCESS_TOKEN,
+                SALESFORCE_SELF_REGISTER_ENABLED : SALESFORCE_SELF_REGISTER_ENABLED,
+                SALESFORCE_SELF_REGISTER_STARTURL_ENABLED : SALESFORCE_SELF_REGISTER_STARTURL_ENABLED,
+                SALESFORCE_FORGOT_PASSWORD_ENABLED : SALESFORCE_FORGOT_PASSWORD_ENABLED
             });
         });
     })
@@ -57,7 +80,15 @@ express()
         db.getAccountAndVehicleByUsername(username, data => {
             response.render("pages/customize", {
                 account: data.account,
-                vehicle: data.vehicle
+                vehicle: data.vehicle,
+                SALESFORCE_COMMUNITY_URL : SALESFORCE_COMMUNITY_URL,
+                SALESFORCE_CLIENT_ID : SALESFORCE_CLIENT_ID,
+                SALESFORCE_REDIRECT_URI : SALESFORCE_REDIRECT_URI,
+                SALESFORCE_MODE : SALESFORCE_MODE,
+                SALESFORCE_SAVE_ACCESS_TOKEN : SALESFORCE_SAVE_ACCESS_TOKEN,
+                SALESFORCE_SELF_REGISTER_ENABLED : SALESFORCE_SELF_REGISTER_ENABLED,
+                SALESFORCE_SELF_REGISTER_STARTURL_ENABLED : SALESFORCE_SELF_REGISTER_STARTURL_ENABLED,
+                SALESFORCE_FORGOT_PASSWORD_ENABLED : SALESFORCE_FORGOT_PASSWORD_ENABLED
             });
         });
     })
@@ -66,7 +97,15 @@ express()
         db.getAccountAndVehicleByUsername(username, data => {
             response.render("pages/dashboard", {
                 account: data.account,
-                vehicle: data.vehicle
+                vehicle: data.vehicle,
+                SALESFORCE_COMMUNITY_URL : SALESFORCE_COMMUNITY_URL,
+                SALESFORCE_CLIENT_ID : SALESFORCE_CLIENT_ID,
+                SALESFORCE_REDIRECT_URI : SALESFORCE_REDIRECT_URI,
+                SALESFORCE_MODE : SALESFORCE_MODE,
+                SALESFORCE_SAVE_ACCESS_TOKEN : SALESFORCE_SAVE_ACCESS_TOKEN,
+                SALESFORCE_SELF_REGISTER_ENABLED : SALESFORCE_SELF_REGISTER_ENABLED,
+                SALESFORCE_SELF_REGISTER_STARTURL_ENABLED : SALESFORCE_SELF_REGISTER_STARTURL_ENABLED,
+                SALESFORCE_FORGOT_PASSWORD_ENABLED : SALESFORCE_FORGOT_PASSWORD_ENABLED
             });
         });
     })
@@ -99,6 +138,14 @@ express()
     })
     .get("/_callback", function (request, response) {
            response.render("pages/_callback", {
+                SALESFORCE_COMMUNITY_URL : SALESFORCE_COMMUNITY_URL,
+                SALESFORCE_CLIENT_ID : SALESFORCE_CLIENT_ID,
+                SALESFORCE_REDIRECT_URI : SALESFORCE_REDIRECT_URI,
+                SALESFORCE_MODE : SALESFORCE_MODE,
+                SALESFORCE_SAVE_ACCESS_TOKEN : SALESFORCE_SAVE_ACCESS_TOKEN,
+                SALESFORCE_SELF_REGISTER_ENABLED : SALESFORCE_SELF_REGISTER_ENABLED,
+                SALESFORCE_SELF_REGISTER_STARTURL_ENABLED : SALESFORCE_SELF_REGISTER_STARTURL_ENABLED,
+                SALESFORCE_FORGOT_PASSWORD_ENABLED : SALESFORCE_FORGOT_PASSWORD_ENABLED
            })
     })
     .listen(PORT, () => console.log(`Listening on ${PORT}`));
