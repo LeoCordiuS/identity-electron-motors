@@ -18,8 +18,8 @@
                 <img id="car-photo" v-bind:src="'/images/' + vehicle.model__c.toLowerCase() + '.png'" v-bind:style="{'-webkit-filter': 'hue-rotate(' + vehicle.paint__c + 'deg)'}" />
             </div>
             <div class="actions">
-                <button>Test Drive</button>
-                <button onclick="location.href='/customize'" class="primary">Customize</button>
+                <button id="testdrive_btn" style="display: none;">Test Drive</button>
+                <button id="customize_btn" onclick="location.href='/customize'" class="primary" style="display: none;">Customize</button>
             </div>
         </div>
         <div>
@@ -41,6 +41,10 @@
 		    
 		var logout = document.getElementById("logoutItem");
                 logout.style.display = "block";
+		var customize_btn = document.getElementById("customize_btn");
+                customize_btn.style.display = "block";
+		var testdrive_btn = document.getElementById("testdrive_btn");
+                testdrive_btn.style.display = "block";
 		    
                 var username = document.createElement('span');
                 username.innerHTML = identity.username;
@@ -98,6 +102,10 @@
 	function onLogout() {
 	    var logout = document.getElementById("logoutItem");
                 logout.style.display = "none";
+	var customize_btn = document.getElementById("customize_btn");
+                customize_btn.style.display = "none";
+	var testdrive_btn = document.getElementById("testdrive_btn");
+                testdrive_btn.style.display = "none";
 	    location.reload();
    
 	
