@@ -29,7 +29,8 @@ express()
         db.getAccountAndVehicleByUsername(username, data => {
             response.render("pages/index", {
                 account: data.account,
-                vehicle: data.vehicle
+                vehicle: data.vehicle,
+                SALESFORCE_COMMUNITY_URL : SALESFORCE_COMMUNITY_URL
             });
         });
     })
