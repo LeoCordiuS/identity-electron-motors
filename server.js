@@ -7,6 +7,16 @@ const PORT = process.env.PORT || 5000;
 var sfUsername, sfPassword, username;
 const db = require("./db.js");
 
+const SALESFORCE_COMMUNITY_URL = process.env.SALESFORCE_COMMUNITY_URL;
+const SALESFORCE_CLIENT_ID = process.env.SALESFORCE_CLIENT_ID;
+const SALESFORCE_REDIRECT_URI = process.env.SALESFORCE_REDIRECT_URI;
+const SALESFORCE_MODE = process.env.SALESFORCE_MODE;
+const SALESFORCE_SAVE_ACCESS_TOKEN = process.env.SALESFORCE_SAVE_ACCESS_TOKEN;
+const SALESFORCE_SELF_REGISTER_ENABLED = process.env.SALESFORCE_SELF_REGISTER_ENABLED;
+const SALESFORCE_SELF_REGISTER_STARTURL_ENABLED = process.env.SALESFORCE_SELF_REGISTER_STARTURL_ENABLED;
+const SALESFORCE_FORGOT_PASSWORD_ENABLED = process.env.SALESFORCE_FORGOT_PASSWORD_ENABLED;
+
+
 express()
     .use(express.static(path.join(__dirname, "public")))
     .use(bodyParser.json())
