@@ -3,7 +3,7 @@
 Electron Motors and Identity example
 ====================================
 
-This is the electron motors nodeJS app running on Heroku and uses Salesforce Identity. Users have to log in (or register itself) to get access to the car customization.
+This is the electron motors nodeJS app running on Heroku and using Salesforce Identity for external customers. Users have to log in (or register itself) to get access to the car customization.
 
 Pre-requisites
 --------------
