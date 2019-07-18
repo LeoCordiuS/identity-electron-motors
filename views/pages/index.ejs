@@ -100,15 +100,14 @@
 	
 	
 	function onLogout() {
-	    var logout = document.getElementById("logoutItem");
+		var logout = document.getElementById("logoutItem");
                 logout.style.display = "none";
-	var customize_btn = document.getElementById("customize_btn");
+	        var customize_btn = document.getElementById("customize_btn");
                 customize_btn.style.visibility = "hidden";
-	var testdrive_btn = document.getElementById("testdrive_btn");
+		var testdrive_btn = document.getElementById("testdrive_btn");
                 testdrive_btn.style.visibility = "hidden";
-	 //   window.location.pathname= '/';
-	 window.location = window.location.host;
-	 location.reload();
+	 	location.reload();
+		location.href = "https://electron-identity.herokuapp.com/";
   
 	}
 	
