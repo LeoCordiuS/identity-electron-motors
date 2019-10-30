@@ -3,13 +3,13 @@
  <!-- Salesforce Identity files-->
       <meta name="salesforce-community" content="<%= SALESFORCE_COMMUNITY_URL %>">
         <meta name="salesforce-client-id" content="<%= SALESFORCE_CLIENT_ID %>">
-        <meta name="salesforce-redirect-uri" content="https://electron-identity.herokuapp.com/_callback">
+        <meta name="salesforce-redirect-uri" content="<%= SALESFORCE_REDIRECT_URI %>">
         <meta name="salesforce-mode" content="modal">
         <meta name="salesforce-target" content="#sign-in-link">
         <meta name="salesforce-save-access-token" content="true">
-        <meta name="salesforce-self-register-enabled" content="true">
-        <meta name="salesforce-self-register-starturl-enabled" content="true">
-        <meta name="salesforce-forgot-password-enabled" content="true">
+        <meta name="salesforce-self-register-enabled" content="<%= SALESFORCE_SELF_REGISTER_ENABLED %>">
+        <meta name="salesforce-self-register-starturl-enabled" content="<%= SALESFORCE_SELF_REGISTER_STARTURL_ENABLED %>">
+        <meta name="salesforce-forgot-password-enabled" content="<%= SALESFORCE_FORGOT_PASSWORD_ENABLED %>">
         <meta name="salesforce-cache-max-age" content="60">
         <meta name="salesforce-login-handler" content="onLogin">
         <meta name="salesforce-logout-handler" content="onLogout">
@@ -17,8 +17,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet/less" type="text/css" href="stylesheets/main.less" />
 <!-- Salesforce Identity script and css files-->
-        <link href="https://sandbox-energy-nosoftware-6554-dev-e-16d4946f1dc.cs102.force.com/emembedded/servlet/servlet.loginwidgetcontroller?type=css" rel="stylesheet" type="text/css" />
-        <script src="https://sandbox-energy-nosoftware-6554-dev-e-16d4946f1dc.cs102.force.com/emembedded/servlet/servlet.loginwidgetcontroller?type=javascript_widget" async="async" defer="defer"></script>
+        <link href="<%= SALESFORCE_COMMUNITY_URL %>/servlet/servlet.loginwidgetcontroller?type=css" rel="stylesheet" type="text/css" />
+        <script src="<%= SALESFORCE_COMMUNITY_URL %>/servlet/servlet.loginwidgetcontroller?type=javascript_widget" async="async" defer="defer"></script>
 <!-- END SCRIPT & CSS Salesforce -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
